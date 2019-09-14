@@ -62,8 +62,8 @@ minetest.register_node("portal:portalslope", {
            		p.x, p.y, p.z = string.match(stringpos, "^([%d.-]+)[, ] *([%d.-]+)[, ] *([%d.-]+)$")
            		if p.x and p.y and p.z then
                 destination = minetest.string_to_pos(stringpos)
-           			teleporiventeste =  minetest.get_player_by_name(player)
-           			teleporiventeste:setpos(destination)
+           			teleportee =  minetest.get_player_by_name(player)
+           			teleportee:setpos(destination)
 
            		end
            	end,
@@ -161,8 +161,8 @@ minetest.register_node("portal:portalblock", {
            		p.x, p.y, p.z = string.match(stringpos, "^([%d.-]+)[, ] *([%d.-]+)[, ] *([%d.-]+)$")
            		if p.x and p.y and p.z then
                 destination = minetest.string_to_pos(stringpos)
-           			teleporiventeste =  minetest.get_player_by_name(player)
-           			teleporiventeste:setpos(destination)
+           			teleportee =  minetest.get_player_by_name(player)
+           			teleportee:setpos(destination)
 
            		end
            	end,
