@@ -1,26 +1,3 @@
-minetest.register_chatcommand("t-black", {
-    params = "<player>",
-    description = "The player see 20 seconds only black",
-    privs = {interact=true},
-    func = function( _ , player)
-      local player2 = minetest.get_player_by_name(player)
-      if not player2 then
-        return
-      end
-      local idx = player2:hud_add({
-        hud_elem_type = "image",
-        position      = {x = 0.5, y = 0.5},
-        offset        = {x = 0,   y = 0},
-        text          = "red2.png",
-        alignment     = {x = 0, y = 0},  -- center aligned
-        scale         = {x = 10, y = 10}, -- covered late
-
-      })
-
-
-      minetest.after(2, function() player2:hud_remove(idx) end)
-end
-})
 
 
 --Mostly copied from the riventest mod with the linking book
